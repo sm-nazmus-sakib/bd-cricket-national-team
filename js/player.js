@@ -4,8 +4,8 @@ function addPlayer(playerName, id) {
   if (playerList.length > 4)
   {
     alert("Already 5 player Added in the Team");
-  } else 
-
+  } 
+  else 
   {
     document.getElementById(id).setAttribute("disabled", "");
 
