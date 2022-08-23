@@ -28,11 +28,9 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
 });
 
 document.getElementById('totalCostBtn').addEventListener('click', function () {
-
   let CoachCost = parseInt(document.getElementById("coachCost").value);
   let ManagerCost = parseInt(document.getElementById("managerCost").value);
   document.getElementById("totalCost").innerText = parseInt(document.getElementById("totalPlayerAllCost").innerText) + ManagerCost + CoachCost;
-
 })
 
 
