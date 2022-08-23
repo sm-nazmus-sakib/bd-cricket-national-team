@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bangladesh national cricket team</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUl -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header section -->
+  <header>
+    <section class="header-section">
+        <div>
+            <div>
+                <h1 class="text-5xl">Bangladesh national cricket team</h1>
+            </div>
+            <div>
+                <p class="mt-4 text-white">The Bangladesh men's national cricket team, popularly known as The
+                    Tigers, is administered by <br> the Bangladesh Cricket Board. It is a Full Member of the
+                    International Cricket Council <br> with Test, One-Day International and T20 International status
+                </p>
+            </div>
+        </div>
+    </section>
+</header>
+
+<!-- Add player and budget section  -->
+  <section class="w-10/12 mx-auto mt-10">
+    <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-3 gap-4">
+
+        <!-- Player1 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/sakib.jpg" alt="sakib Jr" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Shakib Al Hasan</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('Shakib Al Hasan','SelectPlayerBtnShakib Al Hasan')"
+                id="SelectPlayerBtnShakib Al Hasan">
+                Setect
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Player2 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/tamim-Iqbal.jpg" alt="tamim-Iqbal" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Tamim Iqbal</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('Tamim Iqbal','SelectPlayerBtnTamim Iqbal')"
+                id="SelectPlayerBtnTamim Iqbal">
+                Setect
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Player3 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/mus.jpg" alt="mus" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Musfiqur Rahim</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('Musfiqur Rahim','SelectPlayerBtnMusfiqur Rahim')"
+                id="SelectPlayerBtnMusfiqur Rahim">
+                Setect
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Player4 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/mahsrafe.jpg" alt="mahsrafe" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Mahsrafe Bin Mortoza</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('Mahsrafe Bin Mortoza','SelectPlayerBtnMahsrafe Bin Mortoza')"
+                id="SelectPlayerBtnMahsrafe Bin Mortoza">Setect</button>
+            </div>
+          </div>
+        </div>
+        <!--  Player5 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/mustafizur rahman.jpg" alt="mustafizur rahman" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Mustafizur Rahman</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('Mustafizur Rahman','SelectPlayerBtnMustafizur Rahman')"
+                id="SelectPlayerBtnMustafizur Rahman">Setect</button>
+            </div>
+          </div>
+        </div>
+        <!--  Player6 -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <figure>
+            <img src="Images/liton-das.jpg" alt="liton-das" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">liton Das</h2>
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="addPlayer('liton Das','SelectPlayerBtnliton Das')"
+                id="SelectPlayerBtnliton Das">Setect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Selected - 5 -->
+
+      <div class="grid grid-cols-1 gap-4 w-100 mx-auto">
+        <div class="card w-full bg-blue-400 shadow-xl">
+          <div class="card-body items-center text-center">
+            <h4 class="text-2xl font-bold text-center text-white">Selected Five Players</h4>
+            <div>
+              <ol id="TeamplayerList" class="list-decimal">
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- Budget -->
+        <div class="card w-full bg-amber-800 shadow-xl p-10">
+          <div class="card-title items-center text-center">
+            <h4 class="text-2xl font-bold text-center text-white">Budget</h4>
+          </div>
+          <div class="my-4">
+            <div class="flex">
+              <label class="text-gray-400 text-lg flex items-center mr-auto" for="perPlayer">Per
+                Player</label>
+              <input id="perPlayerCost" class="border text-black border-white bg-white w-7/12 p-2" type="text" />
+            </div>
+          </div>
+
+          <div>
+            <button id="calculateBtn"
+              class="btn btn-outline items-center w-full py-2 px-16 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-4">
+              <span class="px-2.5">Calculate</span>
+            </button>
+          </div>
+          <div>
+            <div class="flex">
+              <p class="text-gray-400 text-lg mr-auto">Player Expenses</p>
+              <p class="text-white text-lg text-left">$<span id="totalPlayerAllCost">0000</span></p>
+            </div>
+            <div class="my-4">
+              <div class="flex">
+                <label class="text-gray-400 text-lg flex items-center mr-auto" for="managerCost">Manager</label>
+                <input id="managerCost" class="border text-black border-black bg-white w-7/12 p-2" type="text">
+              </div>
+            </div>
+            <div class="my-4">
+              <div class="flex">
+                <label class="text-gray-400 text-lg flex items-center mr-auto" for="coachCost">Coach</label>
+                <input id="coachCost" class="border text-black border-white bg-white w-7/12 p-2" type="text">
+              </div>
+            </div>
+          </div>
+          <div>
+            <button id="totalCostBtn"
+              class="btn btn-outline items-center w-full py-2 px-12 text-1xl font-medium text-center text-white buton-color hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mb-4">
+              Calculate Total
+            </button>
+            <div class="flex">
+              <p class="text-black-900  text-lg mr-auto font-bold">Player Expenses : </p>
+              <p class="text-white text-lg text-left">$<span id="totalCost">0000</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <section>
+    <footer class="footer footer-center p-4 text-base-content">
+      <div>
+        <p>
+          Copyright ©2022 All right reserved by Nazmus Sakib
+        </p>
+      </div>
+    </footer>
+  </section>
+
+  <script src="js/player.js"></script>
+</body>
+</html>
