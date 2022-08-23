@@ -8,13 +8,11 @@ function addPlayer(playerName, id) {
   else 
   {
     document.getElementById(id).setAttribute("disabled", "");
-
     playerList.push(playerName);
     const node = document.createElement("li");
     const textNode = document.createTextNode(playerName);
     node.appendChild(textNode);
     document.getElementById("TeamplayerList").appendChild(node);
-
   }
 }
 
