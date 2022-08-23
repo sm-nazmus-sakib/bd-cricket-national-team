@@ -16,12 +16,14 @@ function addPlayer(playerName, id) {
   }
 }
 
+
 document.getElementById("calculateBtn").addEventListener("click", function () {
   let perPlayerCost = document.getElementById("perPlayerCost");
   let perPlayerCostAmount = parseInt(perPlayerCost.value);
   let totalPlayerCost = perPlayerCostAmount * (playerList.length);
   document.getElementById("totalPlayerAllCost").innerText = totalPlayerCost;
 });
+
 
 document.getElementById('totalCostBtn').addEventListener('click', function () {
   let CoachCost = parseInt(document.getElementById("coachCost").value);
